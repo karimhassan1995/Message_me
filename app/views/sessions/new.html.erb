@@ -1,0 +1,43 @@
+<div class="column">
+  <div  class= "ui two column centered grid">    
+      <h1>Welcome to MessageMe-a complete Chat App </h1>
+  </div>
+</div>
+ <h4 class="ui center aligned medium icon header">
+  <i class="circular orange coffee icon"></i>
+  Login to continue
+</h4>
+<div class="ui placeholder segment">
+  <div class="ui two column very relaxed stackable grid">
+    <div class="column">
+      <%= form_for(:session , url: login_path) do |f| %>
+        <div class="field">
+          <%= f.label :username  %>
+          <div class="ui left icon input">
+            <%= f.text_field :username , placeholder: "Username" %>
+            <i class="user icon"></i>
+          </div>
+        </div>
+        <div class="field">
+           <%= f.label :password %>
+          <div class="ui left icon input">
+            <%= f.password_field :password%>
+            <i class="lock icon"></i>
+          </div>
+        </div>
+        <div class= "mt4" >
+            <%= f.submit "Log in" , class: "ui row orange submit button" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="middle aligned column">
+      <div class="ui orange big button">
+        <i class="signup icon"></i>
+        Sign Up
+      </div>
+    </div>
+  </div>
+  <div class="ui vertical divider">
+    Or
+  </div>
+</div>
